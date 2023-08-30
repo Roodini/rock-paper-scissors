@@ -4,66 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <script>
-    let playerScore = 0;
-    let computerScore = 0;
-
-  const game = () => {
-  for (let i = 0; i < 5; i++) {
-  //let choice = Math.floor(Math.random() * 3) + 1;
-
-  function getComputerChoice() {
-    let choicesAvailable = ['Rock', 'Paper', 'Scissors'];
-    let randomChoice = choicesAvailable[Math.floor(Math.random()*choicesAvailable.length)];
-    return randomChoice;
-  }
-    
-    function rounds(playerSelection, computerSelection){
-    if (playerSelection == "Rock" && computerSelection == "Scissors"){
-        playerScore++;
-       return "Rock beats scissors, you win.";
-    
-    }else if (playerSelection == "Scissors" && computerSelection == "Rock"){
-        computerScore++;
-       return "Rock beats scissors, computer wins.";
-       
-    }else if (playerSelection == "Scissors" && computerSelection == "Paper"){
-        playerScore++;
-       return "Scissors beats paper, you win.";
-       
-    }else if (playerSelection == "Paper" && computerSelection == "Scissors"){
-        computerScore++;
-       return "Scissors beats paper, computer wins.";
-       
-    }else if (playerSelection == "Paper" && computerSelection == "Rock"){
-        playerScore++;
-       return "Paper beats rock, you win.";
-       
-    }else if (playerSelection == "Rock" && computerSelection == "Paper"){
-        computerScore++;
-       return "Paper beats rock, computer wins.";
-        
-    }if (playerSelection === computerSelection){
-        return "Tie!";
-        
-    }
-}
-    
-    let player = prompt('pick', '');
-    playerConverted = player.charAt(0).toUpperCase() + player.slice(1).toLowerCase();
-    const playerSelection = playerConverted;
-    const computerSelection = getComputerChoice();
-    console.log(rounds(playerSelection, computerSelection));
-
-    console.log(`Player pick: ${playerSelection}`);
-    console.log(`Computer pick: ${computerSelection}`);
-    console.log(`Computer score: ${computerScore}, Player score: ${playerScore}`);
-    
-}
-  }
-    game();
-    </script>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
 </body>
 </html>
